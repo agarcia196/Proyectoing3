@@ -38,7 +38,9 @@
   position: absolute;
   width: 260px;
 }
-
+.btn-primary{
+  background-color: green !important;
+}
 /* offline-doc */
 
 .offline-doc .navbar.navbar-transparent {
@@ -74,32 +76,24 @@
   width: 100%;
   z-index: 2;
 }
-
-#map {
-  z-index: 2;
-  height: calc(100vh - 70px);
-  margin-top: 70px;
 }</style>
      @yield('link_head')
   </head>
   <body>
-    <header>
     @yield('navbar')
-    </header>
     @yield('content')
    
   </body>
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+   
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
+ <!-- jQuery library -->
+    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
     <!--   Core JS Files   -->
     <script src="{{ asset('js/core/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>

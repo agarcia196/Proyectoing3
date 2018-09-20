@@ -1,4 +1,7 @@
 @extends('Capas.general')
+@section('navbar')
+@include('Capas.navbar')
+@endsection
 @section('content')
-<h1>Hola soy Noticias</h1>
+
 @endsection
