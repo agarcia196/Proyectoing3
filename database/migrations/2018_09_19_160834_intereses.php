@@ -14,8 +14,8 @@ class Intereses extends Migration
     public function up()
     {
         Schema::create('intereses', function (Blueprint $table) {
-            $table->string('interes');
-            $table->integer('id_user');
+            $table->string('interes')->primary();
+            $table->integer('id_user')->foreign()->references('id_usuario')->on('usuarios');
             $table->timestamps();
         });
     }

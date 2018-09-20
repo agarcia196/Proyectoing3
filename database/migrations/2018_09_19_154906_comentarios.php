@@ -14,11 +14,11 @@ class Comentarios extends Migration
     public function up()
     {
         Schema::create('comentarios', function (Blueprint $table) {
-            $table->increments('id_comentario');
+            $table->increments('id_comentario')->primary();
             $table->integer('id_user');
             $table->string('comentario');
             $table->datetime('fecha');
-            $table->integer('publicacion_id');
+            $table->integer('publicacion_id')->foreign()->references('id_publicacion')->on('publicaciones');
             $table->timestamps();
         });
     }

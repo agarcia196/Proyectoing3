@@ -14,8 +14,8 @@ class Cursos extends Migration
     public function up()
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->string('nombre_curso');
-            $table->integer('id_user');
+            $table->string('nombre_curso')->primary();
+            $table->integer('id_user')->foreign()->references('id_usuario')->on('usuarios');
             $table->string('descripcion');
             $table->timestamps();
         });
