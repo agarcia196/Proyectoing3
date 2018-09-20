@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UserCrl extends Controller
 {
     public function index(){
-    $hola = 2;
+    $hola = 1;
 	if(1==$hola){
 	return view('Publicaciones.noticias')
     ->with('title','No tengo nombre');
