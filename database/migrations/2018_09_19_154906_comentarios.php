@@ -15,7 +15,7 @@ class Comentarios extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
 
-            $table->increments('id_comentario')->primary();
+            $table->increments('id_comentario');
             $table->integer('id_user');
             $table->string('comentario');
             $table->datetime('fecha');

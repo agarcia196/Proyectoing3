@@ -14,7 +14,7 @@ class CreateProyectoEventosTbl extends Migration
     public function up()
     {
         Schema::create('proyecto', function (Blueprint $table) {
-            $table->increments('id_proyecto')->primary();
+            $table->increments('id_proyecto');
             $table->dateTime('fecha_inicio');
             $table->dateTime('fecha_final')->nullable();
             $table->string('titulo',100);

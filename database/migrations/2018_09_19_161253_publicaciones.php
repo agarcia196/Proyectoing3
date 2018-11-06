@@ -14,7 +14,7 @@ class Publicaciones extends Migration
     public function up()
     {
         Schema::create('publicaciones', function (Blueprint $table) {
-            $table->increments('id_publicacion')->primary();
+            $table->increments('id_publicacion');
             $table->datetime('fecha_publicacion');
             $table->integer('usuario')->foreign()->references('id_usuario')->on('usuarios');
             $table->string('descripcion');

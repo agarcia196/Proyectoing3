@@ -10,14 +10,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','UserCrl@index');
 
-Route::get('/Registro','UserCrl@register');
+Route::get('/','UserController@index')
+->name('index');
 
-Route::get('/Configuracion', 'UserCrl@config');
+Route::get('/Registro','UserController@register')
+->name('user.registro');
 
-Route::get('/{name}','UserCrl@perfil');
+Route::get('/Configuracion', 'UserController@config')
+->name('user.configuracion');
 
-Route::get('/proyecto/{name}','PublicCrl@proyecto');
+Route::get('/perfil/{name}','UserController@perfil')
+->name('user.perfil');
 
-Route::get('/buscar/','PublicCrl@buscar');
+Route::get('/lista/proyectos','PubliController@proyectolista')
+->name('proyectos');
+
+Route::get('/proyecto/{name}','PubliController@proyecto')
+->name('proyecto');
+
+Route::get('/buscar/','PubliController@buscar')
+->name('buscador');
+;
